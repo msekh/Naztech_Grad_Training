@@ -1,0 +1,33 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="library" class="io.naztech.DIwithList.Library">
+		<property name="bookList">
+			<list>
+				<ref bean="book1" />
+				<ref bean="book2" />
+			</list>
+		</property>
+		<property name="stringList">
+			<list>
+				<value>Welcome</value>
+				<value>To</value>
+				<value>JavaInterivewPoint</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="book1" class="io.naztech.DIwithList.Book">
+		<property name="title" value="Core Spring" />
+		<property name="author" value="JavaInterviewPoint" />
+		<property name="publications" value="JIP" />
+	</bean>
+	<bean id="book2" class="io.naztech.DIwithList.Book">
+		<property name="title" value="Spring MVC" />
+		<property name="author" value="JavaInterviewPoint" />
+		<property name="publications" value="JIP" />
+	</bean>
+</beans>

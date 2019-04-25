@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="deptmnt" class=" io.naztech.DIwithSet.Department">
+		<property name="deptName" value="CSE" />
+		<property name="setEmployees">
+			<set>
+				<ref bean="e1" />
+				<ref bean="e2" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="e1" class="io.naztech.DIwithSet.Employee">
+		<constructor-arg value="101" />
+		<constructor-arg value="Sekh" />
+		<constructor-arg value="msekh36@gamil.com" />
+	</bean>
+	<bean id="e2" class="io.naztech.DIwithSet.Employee">
+		<property name="id" value="102" />
+		<property name="name" value="Mahadi" />
+		<property name="email" value="mahadi@gmail.com" />
+	</bean>
+</beans>

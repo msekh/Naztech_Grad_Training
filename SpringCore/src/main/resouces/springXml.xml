@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-init-method="init" default-destroy-method="">
+
+	<bean id="library" class="io.naztech.xmlConfig.Library" scope="singleton">
+		<property name="book" ref="book"></property>
+	</bean>
+
+	<bean id="book" class="io.naztech.xmlConfig.Book" >
+		<property name="title" value="Spring XML Configuration" />
+		<property name="author" value="Sekh" />
+		<property name="publications" value="MTECH" />
+	</bean>
+</beans>

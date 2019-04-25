@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="io.naztech.di.Student">
+		<!-- <property name="id" value="101" /> <property name="name" value="Sekh"/> -->
+	</bean>
+	<bean id="stdnt" class="io.naztech.di.Student">
+		<constructor-arg  value="101"></constructor-arg>
+		<constructor-arg  value="Mahadi"></constructor-arg>
+	</bean>
+</beans>
